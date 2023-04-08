@@ -1,0 +1,1053 @@
+{
+	"info": {
+		"_postman_id": "70e3f2d6-19b8-4a47-9b17-a32d107785df",
+		"name": "Workshop App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21528699"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/user/register",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "muhammet@mail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Kadir\",\r\n    \"lastName\":\"Kesecek\",\r\n    \"email\":\"kadir@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"enabled\":true,\r\n    \"tokenExpired\":true,\r\n    \"roles\":[\r\n        {\"id\":2, \"name\":\"ROLE_customer\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/user/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Sinan\",\r\n    \"lastName\":\"Tekin\",\r\n    \"email\":\"sinan@mail.com\",\r\n    \"password\":\"12345\",\r\n    \"enabled\":true,\r\n    \"tokenExpired\":true,\r\n    \"roles\":[\r\n        {\"id\":2, \"name\":\"ROLE_customer\"}\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 22:29:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"User registered.\",\n    \"result\": {\n        \"id\": 1,\n        \"firstName\": \"Semih\",\n        \"lastName\": \"Tekin\",\n        \"email\": \"semih@mail.com\",\n        \"password\": \"$2a$10$9SRB8GGhatvIV3npwuvkbe5d9KN8pOJlJaFAJwm3Y5uyAyCkc.93u\",\n        \"enabled\": true,\n        \"tokenExpired\": true,\n        \"roles\": [\n            {\n                \"id\": 1,\n                \"name\": \"ROLE_admin\",\n                \"users\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Repair",
+			"item": [
+				{
+					"name": "/repair/listAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "semih@mail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/repair/listAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"repair",
+								"listAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/repair/listAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/repair/listAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"listAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:34:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"result\": [\n        {\n            \"createdBy\": null,\n            \"createdDate\": 0,\n            \"lastModifiedBy\": \"semih@mail.com\",\n            \"lastModifiedDate\": 1680951313342,\n            \"rid\": 1,\n            \"name\": \"Iphone 14 repair\",\n            \"detail\": \"Phone's screen will change.\",\n            \"status\": \"completed\"\n        },\n        {\n            \"createdBy\": \"samet@mail.com\",\n            \"createdDate\": 1680951436431,\n            \"lastModifiedBy\": \"samet@mail.com\",\n            \"lastModifiedDate\": 1680951436431,\n            \"rid\": 2,\n            \"name\": \"Samsung Galaxy S23 repair\",\n            \"detail\": \"Phone's camera will change.\",\n            \"status\": \"notCompleted\"\n        },\n        {\n            \"createdBy\": \"mustafa@mail.com\",\n            \"createdDate\": 1680951563604,\n            \"lastModifiedBy\": \"mustafa@mail.com\",\n            \"lastModifiedDate\": 1680951563604,\n            \"rid\": 3,\n            \"name\": \"Macbook repair\",\n            \"detail\": \"Laptop's microphone will change.\",\n            \"status\": \"notCompleted\"\n        },\n        {\n            \"createdBy\": \"kadir@mail.com\",\n            \"createdDate\": 1680951637508,\n            \"lastModifiedBy\": \"kadir@mail.com\",\n            \"lastModifiedDate\": 1680951637508,\n            \"rid\": 4,\n            \"name\": \"Tablet repair\",\n            \"detail\": \"Tablet's screen will change.\",\n            \"status\": \"notCompleted\"\n        },\n        {\n            \"createdBy\": \"emre@mail.com\",\n            \"createdDate\": 1680953490744,\n            \"lastModifiedBy\": \"emre@mail.com\",\n            \"lastModifiedDate\": 1680953490744,\n            \"rid\": 5,\n            \"name\": \"Tablet repair\",\n            \"detail\": \"Tablet's screen will change.\",\n            \"status\": \"notCompleted\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/repair/productUpdate",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "semih@mail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rid\":4,\r\n    \"name\":\"Macbook repair\",\r\n    \"detail\":\"The screen will be replaced.\",\r\n    \"status\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/repair/productUpdate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"repair",
+								"productUpdate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/repair/productUpdate",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rid\":1,\r\n    \"name\":\"Iphone 14 repair\",\r\n    \"detail\":\"Phone's screen will change.\",\r\n    \"status\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/repair/productUpdate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"productUpdate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 10:55:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"result\": {\n        \"createdBy\": null,\n        \"createdDate\": 0,\n        \"lastModifiedBy\": null,\n        \"lastModifiedDate\": 0,\n        \"rid\": 1,\n        \"name\": \"Iphone 14 repair\",\n        \"detail\": \"Phone's screen will change.\",\n        \"status\": \"completed\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/repair/save",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "muhammet@mail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Telephone repair\",\r\n    \"detail\":\"Phone screen repair.\",\r\n    \"status\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/repair/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"repair",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/repair/save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Tablet repair\",\r\n    \"detail\":\"Tablet's screen will change.\",\r\n    \"status\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/repair/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:00:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"result\": {\n        \"createdBy\": \"kadir@mail.com\",\n        \"createdDate\": 1680951637508,\n        \"lastModifiedBy\": \"kadir@mail.com\",\n        \"lastModifiedDate\": 1680951637508,\n        \"rid\": 4,\n        \"name\": \"Tablet repair\",\n        \"detail\": \"Tablet's screen will change.\",\n        \"status\": \"notCompleted\"\n    }\n}"
+						},
+						{
+							"name": "Error message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Tablet repair\",\r\n    \"detail\":\"Tablet's microphone will change.\",\r\n    \"status\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/repair/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"save"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:22:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"message\": \"JSON parse error: Cannot deserialize value of type `com.works.utils.EnumStatus` from number 5: index value outside legal index range [0..1]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.works.utils.EnumStatus` from number 5: index value outside legal index range [0..1]\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 4, column: 14] (through reference chain: com.works.entities.Repair[\\\"status\\\"])\"\n}"
+						},
+						{
+							"name": "Error message",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Tablet repair\",\r\n    \"detail\":\"Tablet's microphone will change.\",\r\n    \"status\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/repair/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"save"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:24:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"errors\": \"GET\",\n    \"expected\": [\n        \"POST\"\n    ],\n    \"message\": \"Request method 'GET' not supported\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/repair/listByStatus",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "muhammet@mail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/repair/listByStatus?enumStatus=completed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"repair",
+								"listByStatus"
+							],
+							"query": [
+								{
+									"key": "enumStatus",
+									"value": "completed"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/repair/listByStatus",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/repair/listByStatus?enumStatus=completed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"listByStatus"
+									],
+									"query": [
+										{
+											"key": "enumStatus",
+											"value": "completed"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:35:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-04-08T11:35:12.423+00:00\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/repair/listByStatus\"\n}"
+						},
+						{
+							"name": "completedList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/repair/listByStatus?enumStatus=completed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"listByStatus"
+									],
+									"query": [
+										{
+											"key": "enumStatus",
+											"value": "completed"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:36:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"result\": [\n        {\n            \"createdBy\": null,\n            \"createdDate\": 0,\n            \"lastModifiedBy\": \"semih@mail.com\",\n            \"lastModifiedDate\": 1680951313342,\n            \"rid\": 1,\n            \"name\": \"Iphone 14 repair\",\n            \"detail\": \"Phone's screen will change.\",\n            \"status\": \"completed\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "notCompletedList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/repair/listByStatus?enumStatus=notCompleted",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"repair",
+										"listByStatus"
+									],
+									"query": [
+										{
+											"key": "enumStatus",
+											"value": "notCompleted"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Apr 2023 11:36:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"result\": [\n        {\n            \"createdBy\": \"samet@mail.com\",\n            \"createdDate\": 1680951436431,\n            \"lastModifiedBy\": \"samet@mail.com\",\n            \"lastModifiedDate\": 1680951436431,\n            \"rid\": 2,\n            \"name\": \"Samsung Galaxy S23 repair\",\n            \"detail\": \"Phone's camera will change.\",\n            \"status\": \"notCompleted\"\n        },\n        {\n            \"createdBy\": \"mustafa@mail.com\",\n            \"createdDate\": 1680951563604,\n            \"lastModifiedBy\": \"mustafa@mail.com\",\n            \"lastModifiedDate\": 1680951563604,\n            \"rid\": 3,\n            \"name\": \"Macbook repair\",\n            \"detail\": \"Laptop's microphone will change.\",\n            \"status\": \"notCompleted\"\n        },\n        {\n            \"createdBy\": \"kadir@mail.com\",\n            \"createdDate\": 1680951637508,\n            \"lastModifiedBy\": \"kadir@mail.com\",\n            \"lastModifiedDate\": 1680951637508,\n            \"rid\": 4,\n            \"name\": \"Tablet repair\",\n            \"detail\": \"Tablet's screen will change.\",\n            \"status\": \"notCompleted\"\n        },\n        {\n            \"createdBy\": \"emre@mail.com\",\n            \"createdDate\": 1680953490744,\n            \"lastModifiedBy\": \"emre@mail.com\",\n            \"lastModifiedDate\": 1680953490744,\n            \"rid\": 5,\n            \"name\": \"Tablet repair\",\n            \"detail\": \"Tablet's screen will change.\",\n            \"status\": \"notCompleted\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "/role/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ROLE_customer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/role/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"role",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/role/save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"ROLE_customer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/role/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"role",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 22:21:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Role saved.\",\n    \"result\": {\n        \"id\": 2,\n        \"name\": \"ROLE_customer\",\n        \"users\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
